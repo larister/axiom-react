@@ -11,12 +11,18 @@ import {
   TextInputButton,
   TextInputIcon,
   InlineValidation,
+  TooltipContent,
+  TooltipContext,
 } from '@brandwatch/axiom-components';
 import {
   DocumentationApi,
   DocumentationContent,
   DocumentationShowCase,
 } from '@brandwatch/axiom-documentation-viewer';
+
+const getTextInputIconTooltip = () => (
+  <TooltipContext color="carbon"><TooltipContent>Some tooltip</TooltipContent></TooltipContext>
+);
 
 export default class Documentation extends Component {
   render() {
@@ -42,7 +48,7 @@ export default class Documentation extends Component {
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
                   size="medium">
-                <TextInputIcon align="left" name="magnify-glass" />
+                <TextInputIcon align="left" name="magnify-glass" tooltip={ getTextInputIconTooltip() } />
                 <TextInputButton>Button</TextInputButton>
               </TextInput>
             </DocumentationShowCase>

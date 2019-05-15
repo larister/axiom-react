@@ -93,7 +93,7 @@ exports[`TextInputIcon renders with the correct iconColor 1`] = `
 </span>
 `;
 
-exports[`TextInputIcon renders with tooltip when TooltipContent passed 1`] = `
+exports[`TextInputIcon renders with tooltip when TooltipContext passed 1`] = `
 <span
   className="ax-input__icon ax-input__icon--align-right"
 >

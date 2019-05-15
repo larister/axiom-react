@@ -6,7 +6,7 @@ import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
 import Tooltip from '../Tooltip/Tooltip';
 import TooltipContent from '../Tooltip/TooltipContent';
-import TooltipContext from '../Tooltip/TooltipContext';
+import TooltipContext, { TooltipContextRef } from '../Tooltip/TooltipContext';
 import TooltipSource from '../Tooltip/TooltipSource';
 import TooltipTarget from '../Tooltip/TooltipTarget';
 
@@ -39,13 +39,13 @@ export default class TextInputIcon extends Component {
           <Icon name={ name } size="1rem" textColor={ iconColor } />
         </TooltipTarget>
         <TooltipSource width="auto">
-          <TooltipContext>
-            { isComponent(tooltip, TooltipContent) ? tooltip : (
+          { isComponent(tooltip, TooltipContextRef) ? tooltip : (
+            <TooltipContext>
               <TooltipContent size="tiny">
                 { tooltip }
               </TooltipContent>
-            ) }
-          </TooltipContext>
+            </TooltipContext>
+          ) }
         </TooltipSource>
       </Tooltip>
     ) : (<Icon name={ name } size="1rem" textColor={ iconColor } />);

@@ -8,9 +8,10 @@ exports[`TableHeader renders 1`] = `
     <th
       className="ax-table__header-label ax-table__header-label--align-left"
     >
-      <button
+      <div
         className="ax-table__header-button"
         disabled={true}
+        role="button"
       >
         Test
         <svg
@@ -28,7 +29,7 @@ exports[`TableHeader renders 1`] = `
           }
           viewBox="0 0 16 16"
         />
-      </button>
+      </div>
     </th>
   </tr>
 </thead>

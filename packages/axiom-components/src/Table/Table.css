@@ -155,6 +155,15 @@
   width: 1%;
 }
 
+/* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
+.ax-table__header-tooltip--wrap {
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* stylelint-enable value-no-vendor-prefix, property-no-vendor-prefix  */
+
 .ax-table__row {
   transition-property: background-color;
   transition-duration: var(--transition-time-base);

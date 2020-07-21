@@ -24,7 +24,9 @@ export function Default() {
       <TableHeader>
         <TableHeaderLabel sortDirection="ascending">Column A</TableHeaderLabel>
         <TableHeaderLabel>Column B</TableHeaderLabel>
-        <TableHeaderLabel>Column C</TableHeaderLabel>
+        <TableHeaderLabel wrap={true}>
+          Super long Column C label with wrapping Lorem ipsum
+        </TableHeaderLabel>
         <TableHeaderLabel>Column D</TableHeaderLabel>
       </TableHeader>
       <TableBody>

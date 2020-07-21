@@ -48,6 +48,12 @@ describe("TableHeaderLabel", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it("renders with wrap", () => {
+    const component = getComponent({ wrap: true });
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it("width overrides grow", () => {
     const component = getComponent({ width: 20, grow: true });
     const tree = component.toJSON();

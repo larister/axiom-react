@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import classnames from "classnames";
 import Base from "../Base/Base";
 import TextIcon from "../Typography/TextIcon";
+import EllipsisTooltip from "../EllipsisTooltip/EllipsisTooltip";
 
 export default class TableHeaderLabel extends Component {
   static propTypes = {
@@ -24,11 +25,14 @@ export default class TableHeaderLabel extends Component {
     textAlign: PropTypes.oneOf(["left", "right", "centre"]),
     /** Set percentage column width (Incompatible with 'grow' and 'shink') */
     width: PropTypes.number,
+    /** Allow label text wrapping */
+    wrap: PropTypes.bool,
   };
 
   static defaultProps = {
     textAlign: "left",
     sortable: true,
+    wrap: false,
   };
 
   render() {
@@ -42,6 +46,7 @@ export default class TableHeaderLabel extends Component {
       textAlign,
       sortable,
       width,
+      wrap,
       ...rest
     } = this.props;
 
@@ -62,13 +67,19 @@ export default class TableHeaderLabel extends Component {
 
     return (
       <Base {...rest} Component="th" className={classes} style={styles}>
-        <button
+        <div
           className="ax-table__header-button"
           disabled={!onClick}
           onClick={onClick}
+          role="button"
         >
-          {children}
-
+          {wrap ? (
+            <EllipsisTooltip className="ax-table__header-tooltip--wrap">
+              {children}
+            </EllipsisTooltip>
+          ) : (
+            children
+          )}
           {sortable && (
             <TextIcon
               cloak={sortDirection === undefined}
@@ -79,7 +90,7 @@ export default class TableHeaderLabel extends Component {
               spaceRight={textAlign === "right" ? "x2" : undefined}
             />
           )}
-        </button>
+        </div>
       </Base>
     );
   }

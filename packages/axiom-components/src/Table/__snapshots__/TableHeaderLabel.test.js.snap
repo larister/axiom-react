@@ -4,9 +4,10 @@ exports[`TableHeaderLabel renders 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -24,7 +25,7 @@ exports[`TableHeaderLabel renders 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -32,9 +33,10 @@ exports[`TableHeaderLabel renders with grow 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--grow"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -52,7 +54,7 @@ exports[`TableHeaderLabel renders with grow 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -60,9 +62,10 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--shrink"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -80,7 +83,7 @@ exports[`TableHeaderLabel renders with shrink 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -88,9 +91,10 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left ax-table__header-label--selected"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -108,7 +112,7 @@ exports[`TableHeaderLabel renders with sortDirection 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -116,12 +120,13 @@ exports[`TableHeaderLabel renders with sortable 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-left"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
-  </button>
+  </div>
 </th>
 `;
 
@@ -129,9 +134,10 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
 <th
   className="ax-table__header-label ax-table__header-label--align-right"
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -149,7 +155,7 @@ exports[`TableHeaderLabel renders with textAlign 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -162,9 +168,10 @@ exports[`TableHeaderLabel renders with width 1`] = `
     }
   }
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -182,7 +189,41 @@ exports[`TableHeaderLabel renders with width 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
+</th>
+`;
+
+exports[`TableHeaderLabel renders with wrap 1`] = `
+<th
+  className="ax-table__header-label ax-table__header-label--align-left"
+>
+  <div
+    className="ax-table__header-button"
+    disabled={true}
+    role="button"
+  >
+    <div
+      className="ax-table__header-tooltip--wrap ax-text--ellipsis"
+      onMouseOver={[Function]}
+    >
+      Test
+    </div>
+    <svg
+      className="ax-icon ax-icon--triangle-up ax-icon--inline ax-icon--space-left-x2 ax-cloak"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<path d=\\"M13 12L7.93 4 3 12z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"/>",
+        }
+      }
+      style={
+        Object {
+          "height": "1rem",
+          "width": "1rem",
+        }
+      }
+      viewBox="0 0 16 16"
+    />
+  </div>
 </th>
 `;
 
@@ -195,9 +236,10 @@ exports[`TableHeaderLabel width overrides grow 1`] = `
     }
   }
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -215,7 +257,7 @@ exports[`TableHeaderLabel width overrides grow 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;
 
@@ -228,9 +270,10 @@ exports[`TableHeaderLabel width overrides shrink 1`] = `
     }
   }
 >
-  <button
+  <div
     className="ax-table__header-button"
     disabled={true}
+    role="button"
   >
     Test
     <svg
@@ -248,6 +291,6 @@ exports[`TableHeaderLabel width overrides shrink 1`] = `
       }
       viewBox="0 0 16 16"
     />
-  </button>
+  </div>
 </th>
 `;

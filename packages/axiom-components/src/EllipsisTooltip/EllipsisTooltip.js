@@ -10,7 +10,11 @@ import TooltipTarget from "../Tooltip/TooltipTarget";
 
 function elementHasEllipsis(ref = {}) {
   const { current } = ref;
-  return current && current.scrollWidth > current.clientWidth;
+  return (
+    current &&
+    (current.scrollWidth > current.clientWidth ||
+      current.scrollHeight > current.clientHeight)
+  );
 }
 
 export default class EllipsisTooltip extends Component {
